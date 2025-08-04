@@ -191,12 +191,21 @@ if st.button("Predict"):
     if model is not None and model_columns is not None:
         prediction = predict_traffic(bytes_in, bytes_out, creation_hour, creation_day, event_hour, event_day, country)
         if prediction == 1:
-            st.success('Predicted as: <span style="color:#ff1744;"><b>Suspicious</b></span>', unsafe_allow_html=True)
+             st.markdown("""
+            <div style="background-color: #ffe6e9; padding: 10px; border-radius: 5px;">
+                <span style="color:#ff1744; font-weight:bold;">Predicted as: Suspicious</span>
+            </div>
+            """, unsafe_allow_html=True)
         elif prediction == 0:
-            st.success('Predicted as: <span style="color:#00e676;"><b>Normal</b></span>', unsafe_allow_html=True)
+            st.markdown("""
+            <div style="background-color: #e6fff2; padding: 10px; border-radius: 5px;">
+                <span style="color:#6B7C3C; font-weight:bold;">Predicted as: Normal</span>
+            </div>
+            """, unsafe_allow_html=True)
         else:
             st.error(prediction)
     else:
         st.error("Could not run prediction. Model or columns missing.")
+
 
 
