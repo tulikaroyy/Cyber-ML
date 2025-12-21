@@ -1,36 +1,23 @@
-Cyber Traffic Intrusion Detection System
+# Cyber Traffic Intrusion Detection System
 
-This repository presents a machine learning–based intrusion detection system for classifying network traffic as Normal or Attack.
+#### This repository presents a machine learning–based intrusion detection system for classifying network traffic as Normal or Attack.
 It combines a deployed end-to-end implementation with a rigorous model evaluation workflow.
 
-Project Overview
+### Project Overview
 
 Intrusion detection requires balancing missed attacks (false negatives) against false alarms (false positives).
 This project demonstrates both practical deployment and evidence-based model selection for this task.
 
-Repository Structure
-Cyber-ML/
-├── app.py
-├── rf_model.pkl
-├── model_columns.pkl
-├── README.md
-├── notebooks/
-│   └── intrusion_detection_evaluation.ipynb
-
-Deployed System (Implementation Scope)
-
-The deployed Streamlit application demonstrates:
+### The deployed Streamlit application demonstrates:
 
 End-to-end preprocessing and inference
-
 Real-time prediction capability
-
 Practical ML system design
 
 A simplified dataset is used to ensure lightweight inference and usability.
 The focus of this component is system implementation rather than exhaustive benchmarking.
 
-Extended Evaluation (Analysis Scope)
+## Extended Evaluation (Analysis Scope)
 
 A separate experimental analysis was conducted using the UNSW-NB15 dataset to rigorously evaluate model performance.
 
@@ -42,27 +29,27 @@ Separate preprocessing for numerical and categorical features using pipelines
 
 Models and Evaluation
 
-Models evaluated:
+### Models evaluated:
 
-Dummy Classifier
+○ Dummy Classifier
 
-Logistic Regression
+○ Logistic Regression
 
-Class-weighted Logistic Regression
+○ Class-weighted Logistic Regression
 
-Random Forest
+○ Random Forest
 
-Evaluation metrics:
+### Evaluation metrics:
 
-Precision, Recall, F1-score
+○ Precision, Recall, F1-score
 
-Confusion Matrix
+○ Confusion Matrix
 
-ROC-AUC
+○ ROC-AUC
 
-Precision–Recall Average Precision
+○ Precision–Recall Average Precision
 
-Key Results
+## Key Results
 
 Final model: Logistic Regression
 
